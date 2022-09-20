@@ -1,0 +1,54 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: rgb(14, 32, 43);
+  color: white;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.legendaryItems {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid white;
+}
+
+.mythicItems {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid white;
+}
+
+.card {
+  border: 2px solid rgb(38, 76, 99);
+  border-radius: 11px;
+  box-shadow: 6px 3px 5px black;
+  margin: 6px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  text-align: center;
+  padding: 4px;
+}
+
+.card img {
+  width: 80px;
+  border: 1px solid white;
+  margin-bottom: 11px;
+}
