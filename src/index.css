@@ -1,34 +1,304 @@
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body{
   background-color: rgb(14, 32, 43);
   color: white;
+  font-family: sans-serif;
+  background-image: url("./img/background/lolbg.jpg");
+  background-position-x: center;
+  background-size: auto;
 }
 
-#content {
+a {
+  text-decoration: none;
+}
+
+.bodyHome {
+  background-color: rgb(14, 32, 43);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+.main::-webkit-scrollbar {
+  width: 11px;               /* width of the entire scrollbar */
+}
+
+.main::-webkit-scrollbar-track {
+  background: rgb(159, 161, 38);        /* color of the tracking area */
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgb(15, 15, 100);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(159, 161, 38);  /* creates padding around scroll thumb */
+}
+
+/* --------------------------- */
+/* ---------- AGREE ---------- */
+/* --------------------------- */
+
+.agreeBo {
+  background-color: rgb(14, 32, 43);
+  padding: 8px;
+  box-shadow: 6px 3px 5px black;
+  border: 6px solid rgb(159, 161, 38);
+  border-radius: 120px 110px;
+}
+
+.agreeBox {
+  /* background-image: url("./img/background/lolbg.jpg");
+  background-size: 900px;
+  background-position-x: center; */
+  background-color: rgb(14, 32, 43);
+  border: 6px solid rgb(159, 161, 38);
+  box-shadow: 6px 3px 5px black;
+  padding: 45px;
+  border-radius: 110px 0;
+  text-align: center;
+}
+
+.agreeRules {
+  background-color: rgba(255, 255, 255, 0.274);
+  border-radius: 40px 0 0 0;
+  border-top: 2px solid rgb(159, 161, 38);
+  border-left: 2px solid rgb(159, 161, 38);
+  border-right: 2px solid rgb(159, 161, 38);
+  width: 400px;
+  padding: 15px;
+  list-style: none;
+  text-align: justify;
+  margin: 11px 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-indent: 25px;
+}
+
+#checkLabel{
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+#checkbox{
+  transform: scale(2);
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.boxAgree {
+  background-color: rgba(255, 255, 255, 0.493);
+  width: 400px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 30px 0;
+  box-shadow: inset 0 0 0 0 rgb(141, 182, 150);
+  transition: ease-in-out 0.8s;
+  color: black;
+  border-left: 3px solid rgb(159, 161, 38);
+  border-bottom: 3px solid rgb(159, 161, 38);
+  border-right: 3px solid rgb(159, 161, 38);
+}
+
+.boxAgree:hover {
+  box-shadow: inset 400px 0 0 0 rgb(51, 163, 75);
+  color: white;
+}
+
+/* --------------------------- */
+/* ---------- HOME ----------- */
+/* --------------------------- */
+
+.home {
+  width: 1100px;
+}
+
+.headerBo {
+  background-color: rgb(14, 32, 43);
+  padding: 7px;
+  box-shadow: 6px 3px 5px black;
+  border: 6px solid rgb(159, 161, 38);
+  border-radius: 0px 110px;
+}
+
+.headerBox {
+  /* background-image: url("./img/background/lolbg.jpg");
+  background-size: 900px;
+  background-position-x: center; */
+  width: 1100px;
+  height: 60px;
+  background-color: rgb(14, 32, 43);
+  border: 6px solid rgb(159, 161, 38);
+  box-shadow: 6px 3px 5px black;
+  border-radius: 110px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 42px;
+  margin-left: -14px;
+}
+
+.iconHome {
+  width: 40px;
+}
+
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 28px;
+  color: rgb(201, 200, 136);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li span {
+  border: 2px solid rgb(23, 50, 66);
+  width: 75px;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+  margin: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 3px;
+  box-shadow: inset 0 0 0 0 rgb(141, 182, 150);
+  transition: ease-in-out 0.2s;
+  font-size: 16px;
+}
+
+nav ul li span:hover {
+  box-shadow: inset 40px 40px 0 0 rgb(201, 200, 136);
+  color: white;
+  border: 2px solid rgb(14, 32, 43);
+}
+
+/* --------------------------- */
+/* -------- Gerador ---------- */
+/* --------------------------- */
+
+.itensGerados {
+  display: flex;
+  justify-content: center;
+}
+
+.mythic, .legendary {
+  width: 300px;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* border: 6px solid rgb(159, 161, 38); */
+  /* border-left: 3px solid rgb(159, 161, 38);
+  border-right: 3px solid rgb(159, 161, 38); */
+}
+.mythic h2, .legendary h2{
+  font-size: 19px;
+  margin: 15px 0;
+}
+
+.btnGerar {
+  background-color: rgb(52, 16, 66);
+  width: 155px;
+  height: 45px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 14px;
+  color: white;
+}
+
+.btnGerar:hover {
+  box-shadow: inset 40px 40px 0 0 rgb(99, 29, 89);
+  color: rgb(17, 10, 56);
+  border: 2px solid rgb(14, 32, 43);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.card2 {
+  border: 2px solid rgb(38, 76, 99);
+  border-radius: 11px;
+  box-shadow: 6px 3px 5px black;
+  margin: 6px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 11px;
+  background-color: rgb(53, 67, 75);
+  font-size: 9px;
+}
+
+.card2 img {
+  width: 75px;
+  border: 1px solid white;
+}
+
+/* --------------------------- */
+/* --------------------------- */
+/* --------------------------- */
+
+.main {
+  background-color: rgb(14, 32, 43);
+  border: 6px solid rgb(159, 161, 38);
+  box-shadow: 6px 3px 5px black;
+  width: 1100px;
+  height: 500px;
+  margin-top: 40px;
+  overflow: auto;
+  padding: 22px;
+  text-align: center;
+}
+
+.mainItem {
+  width: 1110px;
+}
+
+.titleItem {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 28px;
+  color: rgb(201, 200, 136);
+  margin: 25px;
+}
+
+/* --------------------------- */
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .legendaryItems {
-  width: 80%;
+  width: 900px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  border: 2px solid white;
+  margin-left: 70px;
 }
 
 .mythicItems {
-  width: 80%;
+  width: 900px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  border: 2px solid white;
+  margin-left: 70px;
 }
 
 .card {
@@ -36,19 +306,18 @@ body{
   border-radius: 11px;
   box-shadow: 6px 3px 5px black;
   margin: 6px;
-  width: 140px;
-  height: 140px;
+  width: 250px;
+  height: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 8px;
   text-align: center;
   padding: 4px;
+  background-color: rgb(53, 67, 75);
+  font-size: 9px;
 }
 
 .card img {
-  width: 80px;
+  width: 45px;
   border: 1px solid white;
-  margin-bottom: 11px;
+  margin-right: 18px;
 }
